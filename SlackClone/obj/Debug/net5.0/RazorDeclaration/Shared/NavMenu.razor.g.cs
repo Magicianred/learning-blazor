@@ -90,7 +90,7 @@ using SlackClone.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/home/madebygps/Developer/learning-blazor/SlackClone/Shared/NavMenu.razor"
+#line 18 "/home/madebygps/Developer/learning-blazor/SlackClone/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

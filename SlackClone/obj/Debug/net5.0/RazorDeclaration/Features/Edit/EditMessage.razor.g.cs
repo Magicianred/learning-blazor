@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace SlackClone.Pages
+namespace SlackClone.Features.Edit
 {
     #line hidden
     using System;
@@ -82,14 +82,40 @@ using SlackClone.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class EditMessage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 11 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Edit/EditMessage.razor"
+       
+    [Parameter]
+    public string MessageText {get; set;}
+
+    [Parameter]
+    public EventCallback OnCancelled {get; set;}
+
+    [Parameter]
+    public EventCallback<string> OnUpdated {get; set;}
+
+    async Task Update()
+    {
+        await OnUpdated.InvokeAsync(MessageText);
+
+    }
+
+    async Task Cancel()
+    {
+        await OnCancelled.InvokeAsync(EventArgs.Empty);
+
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

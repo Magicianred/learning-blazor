@@ -341,101 +341,144 @@
         }
       },
       {
-        "HashCode": 1694912915,
+        "HashCode": -525188942,
         "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.Counter",
+        "Name": "SlackClone.Features.Edit.EditMessage",
         "AssemblyName": "SlackClone",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "EditMessage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "MessageText",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "MessageText"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnCancelled",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnCancelled",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnUpdated",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "OnUpdated",
+              "Components.EventCallback": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.Counter"
+          "Common.TypeName": "SlackClone.Features.Edit.EditMessage"
         }
       },
       {
-        "HashCode": -880283648,
+        "HashCode": 1147897710,
         "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.Counter",
+        "Name": "SlackClone.Features.Edit.EditMessage",
         "AssemblyName": "SlackClone",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SlackClone.Pages.Counter"
+            "TagName": "SlackClone.Features.Edit.EditMessage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "MessageText",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "MessageText"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnCancelled",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnCancelled",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnUpdated",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "OnUpdated",
+              "Components.EventCallback": "True"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.Counter",
+          "Common.TypeName": "SlackClone.Features.Edit.EditMessage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1273309182,
+        "HashCode": -1389179516,
         "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.FetchData",
+        "Name": "SlackClone.Features.Edit.EditableMessage",
         "AssemblyName": "SlackClone",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "EditableMessage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Details",
+            "TypeName": "SlackClone.Domain.SlackMessage",
+            "Metadata": {
+              "Common.PropertyName": "Details"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.FetchData"
+          "Common.TypeName": "SlackClone.Features.Edit.EditableMessage"
         }
       },
       {
-        "HashCode": 1349464122,
+        "HashCode": 1863390381,
         "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.FetchData",
+        "Name": "SlackClone.Features.Edit.EditableMessage",
         "AssemblyName": "SlackClone",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SlackClone.Pages.FetchData"
+            "TagName": "SlackClone.Features.Edit.EditableMessage"
           }
         ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1433078919,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.Index",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
+        "BoundAttributes": [
           {
-            "TagName": "Index"
+            "Kind": "Components.Component",
+            "Name": "Details",
+            "TypeName": "SlackClone.Domain.SlackMessage",
+            "Metadata": {
+              "Common.PropertyName": "Details"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 889785211,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Pages.Index",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Pages.Index",
+          "Common.TypeName": "SlackClone.Features.Edit.EditableMessage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13308,8 +13351,13 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Pages/Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
+      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Edit/EditMessage.razor",
+      "TargetPath": "Features\\Edit\\EditMessage.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Edit/EditableMessage.razor",
+      "TargetPath": "Features\\Edit\\EditableMessage.razor",
       "FileKind": "component"
     },
     {
@@ -13343,18 +13391,8 @@
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Pages/FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Features/PostNew/PostMessage.razor",
       "TargetPath": "Features\\PostNew\\PostMessage.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Pages/Index.razor",
-      "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {

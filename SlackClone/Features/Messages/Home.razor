@@ -1,40 +1,39 @@
-@page "/slack"
-@using SlackClone.Features.Messages
+@page "/"
 @using SlackClone.Domain
 @using SlackClone.Features.PostNew
+@using SlackClone.Features.Edit
 
 @foreach (var message in messages)
 {
-    <Message details="@message"/>
+    <EditableMessage details="@message" />
 }
 
-<PostMessage OnPosted="HandleNewMessage"/>
+<PostMessage OnPosted="HandleNewMessage"> </PostMessage>
 
 @code {
     private List<SlackMessage> messages;
-    
+
     protected override void OnInitialized()
     {
-        /*This method is executed at the point your component is 
-        initialized, before anything is rendered to the screen, 
+        /*This method is executed at the point your component is
+        initialized, before anything is rendered to the screen,
         making it the perfect place to retrieve data.*/
 
         messages = new List<SlackMessage> {
-
-            new SlackMessage{
+            new SlackMessage
+            {
                 Message = "Hello",
                 PostedBy = "GPS",
                 PostedOn = DateTime.Now
             },
-            new SlackMessage{
+            new SlackMessage 
+            {
                 Message = "How are you?",
                 PostedBy = "Gwyn",
                 PostedOn = DateTime.Now
             },
-            
-            
-            };
-            
+        };
+
     }
     protected void HandleNewMessage(SlackMessage message)
     {
@@ -42,4 +41,3 @@
     }
 
 }
-   

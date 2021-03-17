@@ -84,26 +84,26 @@ using SlackClone.Shared;
 #nullable disable
 #nullable restore
 #line 2 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
-using SlackClone.Features.Messages;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
 using SlackClone.Domain;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
+#line 3 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
 using SlackClone.Features.PostNew;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/slack")]
+#nullable restore
+#line 4 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
+using SlackClone.Features.Edit;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -115,29 +115,28 @@ using SlackClone.Features.PostNew;
 #line 13 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
        
     private List<SlackMessage> messages;
-    
+
     protected override void OnInitialized()
     {
-        /*This method is executed at the point your component is 
-        initialized, before anything is rendered to the screen, 
+        /*This method is executed at the point your component is
+        initialized, before anything is rendered to the screen,
         making it the perfect place to retrieve data.*/
 
         messages = new List<SlackMessage> {
-
-            new SlackMessage{
+            new SlackMessage
+            {
                 Message = "Hello",
                 PostedBy = "GPS",
                 PostedOn = DateTime.Now
             },
-            new SlackMessage{
+            new SlackMessage 
+            {
                 Message = "How are you?",
                 PostedBy = "Gwyn",
                 PostedOn = DateTime.Now
             },
-            
-            
-            };
-            
+        };
+
     }
     protected void HandleNewMessage(SlackMessage message)
     {
