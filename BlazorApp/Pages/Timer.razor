@@ -1,0 +1,21 @@
+@page "/"
+@inherits TimerBase
+
+@* Sometimes you'll need your components to interact with "other things".
+    For example, you might need to make an HTTP call to a backend API, or
+    execute some business logic which you don't really want polluting your components.
+    Dependency injection provides a convenient way to get these services
+    into your component, using the @inject directive. *@
+
+<div class="flex flex-col items-center max-w-2xl mx-auto text-gray-800">
+
+    <div class="" style="font-size: 12em">
+        @remaining
+    </div>
+    <div class ="flex justify-between w-full">
+        <button class="flex-grow m-2 bg-green-600 p-4 shadow-md text-white font-semibold" @onclick="Start" disabled="@startButtonDisabled">Start</button>
+        <button class="flex-grow m-2 bg-red-500 p-4 shadow-md text-white font-semibold" @onclick="Stop" disabled="@stopButtonDisabled">Stop</button>
+        <button class="flex-grow m-2 bg-yellow-600 p-4 shadow-md text-white font-semibold" @onclick="Reset">Reset</button>
+    </div>
+    
+</div>
