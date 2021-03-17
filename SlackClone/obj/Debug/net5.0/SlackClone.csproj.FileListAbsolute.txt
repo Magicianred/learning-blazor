@@ -640,3 +640,5 @@
 /home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/SlackClone.dll
 /home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/ref/SlackClone.dll
 /home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/SlackClone.pdb
+/home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/RazorDeclaration/Features/PostNew/PostMessage.razor.g.cs
+/home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/Razor/Features/PostNew/PostMessage.razor.g.cs

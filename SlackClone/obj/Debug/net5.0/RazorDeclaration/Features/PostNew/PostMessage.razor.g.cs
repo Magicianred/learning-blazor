@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace SlackClone.Features.Messages
+namespace SlackClone.Features.PostNew
 {
     #line hidden
     using System;
@@ -83,28 +83,13 @@ using SlackClone.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
-using SlackClone.Features.Messages;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
+#line 1 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/PostNew/PostMessage.razor"
 using SlackClone.Domain;
 
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
-using SlackClone.Features.PostNew;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/slack")]
-    public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class PostMessage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -112,38 +97,20 @@ using SlackClone.Features.PostNew;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/Messages/Home.razor"
+#line 17 "/home/madebygps/Developer/learning-blazor/SlackClone/Features/PostNew/PostMessage.razor"
        
-    private List<SlackMessage> messages;
-    
-    protected override void OnInitialized()
+    public SlackMessage NewMessage { get; set; } = new SlackMessage();
+    [Parameter]
+    public EventCallback<SlackMessage> OnPosted { get; set; }
+    async Task HandleSubmit()
     {
-        /*This method is executed at the point your component is 
-        initialized, before anything is rendered to the screen, 
-        making it the perfect place to retrieve data.*/
+        NewMessage.PostedBy = "GPS";
+        NewMessage.PostedOn = DateTime.Now;
+        await OnPosted.InvokeAsync(NewMessage);
 
-        messages = new List<SlackMessage> {
+        NewMessage = new SlackMessage();
 
-            new SlackMessage{
-                Message = "Hello",
-                PostedBy = "GPS",
-                PostedOn = DateTime.Now
-            },
-            new SlackMessage{
-                Message = "How are you?",
-                PostedBy = "Gwyn",
-                PostedOn = DateTime.Now
-            },
-            
-            
-            };
-            
     }
-    protected void HandleNewMessage(SlackMessage message)
-    {
-        messages.Add(message);
-    }
-
 
 #line default
 #line hidden

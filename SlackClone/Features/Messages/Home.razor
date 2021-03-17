@@ -1,14 +1,18 @@
 @page "/slack"
 @using SlackClone.Features.Messages
 @using SlackClone.Domain
+@using SlackClone.Features.PostNew
 
 @foreach (var message in messages)
 {
     <Message details="@message"/>
 }
 
+<PostMessage OnPosted="HandleNewMessage"/>
+
 @code {
     private List<SlackMessage> messages;
+    
     protected override void OnInitialized()
     {
         /*This method is executed at the point your component is 
@@ -31,6 +35,10 @@
             
             };
             
+    }
+    protected void HandleNewMessage(SlackMessage message)
+    {
+        messages.Add(message);
     }
 
 }

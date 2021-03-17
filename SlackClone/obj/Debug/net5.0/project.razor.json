@@ -41,6 +41,306 @@
         }
       },
       {
+        "HashCode": 52545017,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.MessageText",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MessageText"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Message",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Message"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.MessageText"
+        }
+      },
+      {
+        "HashCode": 25146489,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.MessageText",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.Messages.MessageText"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Message",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Message"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.MessageText",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1006411519,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Time",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Time"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Value",
+            "TypeName": "System.DateTime",
+            "Metadata": {
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Time"
+        }
+      },
+      {
+        "HashCode": -1779777076,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Time",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.Messages.Time"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Value",
+            "TypeName": "System.DateTime",
+            "Metadata": {
+              "Common.PropertyName": "Value"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Time",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -676856500,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Username",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Username"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Username"
+        }
+      },
+      {
+        "HashCode": 928285387,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Username",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.Messages.Username"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Username",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -807104342,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Message",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Message"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Details",
+            "TypeName": "SlackClone.Domain.SlackMessage",
+            "Metadata": {
+              "Common.PropertyName": "Details"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Message"
+        }
+      },
+      {
+        "HashCode": 258164821,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Message",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.Messages.Message"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Details",
+            "TypeName": "SlackClone.Domain.SlackMessage",
+            "Metadata": {
+              "Common.PropertyName": "Details"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Message",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -617857749,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Home",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Home"
+        }
+      },
+      {
+        "HashCode": 1377389666,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.Messages.Home",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.Messages.Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.Messages.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 247911676,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.PostNew.PostMessage",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PostMessage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "OnPosted",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<SlackClone.Domain.SlackMessage>",
+            "Metadata": {
+              "Common.PropertyName": "OnPosted",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.PostNew.PostMessage"
+        }
+      },
+      {
+        "HashCode": 601955773,
+        "Kind": "Components.Component",
+        "Name": "SlackClone.Features.PostNew.PostMessage",
+        "AssemblyName": "SlackClone",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SlackClone.Features.PostNew.PostMessage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "OnPosted",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<SlackClone.Domain.SlackMessage>",
+            "Metadata": {
+              "Common.PropertyName": "OnPosted",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "SlackClone.Features.PostNew.PostMessage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1694912915,
         "Kind": "Components.Component",
         "Name": "SlackClone.Pages.Counter",
@@ -318,251 +618,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "SlackClone.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -676856500,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Username",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Username"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Name",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Name"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Username"
-        }
-      },
-      {
-        "HashCode": 928285387,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Username",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Features.Messages.Username"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Name",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Name"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Username",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1006411519,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Time",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Time"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Value",
-            "TypeName": "System.DateTime",
-            "Metadata": {
-              "Common.PropertyName": "Value"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Time"
-        }
-      },
-      {
-        "HashCode": -1779777076,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Time",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Features.Messages.Time"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Value",
-            "TypeName": "System.DateTime",
-            "Metadata": {
-              "Common.PropertyName": "Value"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Time",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -807104342,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Message",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Message"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Details",
-            "TypeName": "SlackClone.Domain.SlackMessage",
-            "Metadata": {
-              "Common.PropertyName": "Details"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Message"
-        }
-      },
-      {
-        "HashCode": 258164821,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Message",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Features.Messages.Message"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Details",
-            "TypeName": "SlackClone.Domain.SlackMessage",
-            "Metadata": {
-              "Common.PropertyName": "Details"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Message",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 52545017,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.MessageText",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MessageText"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Message",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Message"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.MessageText"
-        }
-      },
-      {
-        "HashCode": 25146489,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.MessageText",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Features.Messages.MessageText"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Message",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Message"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.MessageText",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -617857749,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Home",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Home"
-        }
-      },
-      {
-        "HashCode": 1377389666,
-        "Kind": "Components.Component",
-        "Name": "SlackClone.Features.Messages.Home",
-        "AssemblyName": "SlackClone",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SlackClone.Features.Messages.Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "SlackClone.Features.Messages.Home",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13290,6 +13345,11 @@
     {
       "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Pages/FetchData.razor",
       "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/home/madebygps/Developer/learning-blazor/SlackClone/Features/PostNew/PostMessage.razor",
+      "TargetPath": "Features\\PostNew\\PostMessage.razor",
       "FileKind": "component"
     },
     {
