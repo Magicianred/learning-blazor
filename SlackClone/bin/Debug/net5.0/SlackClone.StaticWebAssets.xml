@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="/home/madebygps/Developer/learning-blazor/SlackClone/bin/Debug/net5.0/wwwroot/" />
+  <ContentRoot BasePath="/" Path="/home/madebygps/Developer/learning-blazor/SlackClone/obj/Debug/net5.0/scopedcss/bundle/" />
+</StaticWebAssets>
