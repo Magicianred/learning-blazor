@@ -1,0 +1,26 @@
+@page "/birthday"
+
+<h1>What day were you born?</h1>
+<input type="text" @bind="_dbo" />
+<button @onclick="Submit">Submit</button>
+<h3>You were born on a...@_day</h3>
+
+@code {
+
+    private string _dbo = "";
+    private string _day = "";
+    
+
+    private void Submit(){
+        if (_dbo != null)
+        {
+            var isValidDate = DateTime.TryParse(_dbo, out var date);
+            if (isValidDate)
+            {
+                _day = date.DayOfWeek.ToString();
+
+            }
+        }
+    }
+
+}

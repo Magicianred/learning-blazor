@@ -1,0 +1,47 @@
+@page "/timer"
+@implements IDisposable
+
+<div class="timer">@remaining</div>
+<button class="btn btn-primary" @onclick="Start">Start</button>
+<button class="btn btn-danger" @onclick="Stop">Stop</button>
+<button class="btn btn-success" @onclick="Reset">Reset</button>
+
+@code {
+    private int _remaining = 25 * 60;
+    private string remaining => TimeSpan.FromSeconds(_remaining).ToString(@"mm\:ss");
+
+    private System.Threading.Timer _timer;
+
+    protected void Start()
+    {
+        // dispose before creating a new one
+        _timer?.Dispose();
+        // Start timer
+        _timer = new System.Threading.Timer(_ => {
+            if (_remaining > 0)
+            {
+                _remaining -= 1;
+                InvokeAsync(StateHasChanged); // Tell Blazor something has changed.
+                // Invoke is necessary because Blazor enforces a single logical thread of execution for all its work.
+                // Our timer callback is executing on a different thread, calling Invoke signals to Blazor 
+                // to switch to the correct content and execute alongside all its other work.
+            }
+        }, null, 0, 1000);
+    }
+
+    private void Stop(){
+        // Stop timer
+        _timer?.Dispose();
+        
+    }
+
+    private void Reset()
+    {
+        _remaining = 60 * 25;
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose();
+    }
+}

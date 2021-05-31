@@ -1,0 +1,10 @@
+@page "/pomodoro"
+@inherits PomodoroBase
+
+<div class="timer">
+    @_remaining
+</div>
+<button class="btn btn-primary" @onclick="Start" disabled="@startButtonDisabled">Start</button>
+<button class="btn btn-danger" @onclick="Stop" disabled="@stopButtonDisabled">Stop</button>
+<button class="btn btn-success" @onclick="Reset">Reset</button>
+
