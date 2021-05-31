@@ -1,0 +1,50 @@
+﻿@page "/"
+@implements IDisposable
+
+<div style="font-size:5em;">@_timeRemaing </div>
+<button class="btn btn-primary" @onclick="Start">Start</button>
+<button class="btn btn-success" @onclick="Reset">Reset</button>
+<button class="btn btn-danger" @onclick="Stop">Stop</button>
+
+@code {
+    private int _timeLeft = 60 * 25; // 60 seconds in each minute, 25 minutes in a pomodoro session.
+    private string _remaining => TimeSpan.FromSeconds(_timeLeft).ToString(@"mm\:ss");
+
+    private string _timeRemaing 
+    {
+        get
+        {
+            var value = TimeSpan.FromSeconds(_timeLeft).ToString(@"mm\:ss");
+            return value;
+        }
+        
+    }
+    private System.Threading.Timer _timer;
+    private void Start()
+    {
+        // start the timer.
+        _timer?.Dispose(); // dispose any timers if they exist, so we don't end up creating multiples.
+        _timer = new System.Threading.Timer(_ => { // timer works using a callback function
+            if (_timeLeft > 0)
+            {
+                _timeLeft -= 1; // each time the timer ticks, we want to remove 1 from _timeLeft
+                InvokeAsync(StateHasChanged); // Signal to blazor that something has changed.
+                // Invoke signals to blazor to swtich to the correct context and execute this alongside all its other work.
+            }
+        }, null, 0, 1000); // we don't need state data, so null. 0 because we don
+    } // each time Start is click, our method will be invoked, the timer will start and _timeleft will be decremented.
+    private void Stop()
+    {
+        // Stop the timer.
+        _timer?.Dispose();
+    }
+    private void Reset()
+    {
+        // Reset the timer.
+        _timeLeft = 60 * 25;
+    }
+    public void Dispose()
+    {
+        _timer.Dispose();
+    }
+}
