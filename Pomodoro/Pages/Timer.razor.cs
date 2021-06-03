@@ -5,6 +5,7 @@ namespace Pomodoro.Pages
 {
     public class TimerBase : ComponentBase, IDisposable // Component base classes are simply C# classes from which your components can inherit.
     {
+        public DateTime timerStarted;
         private int _timeLeft = 60 * 25; // 60 seconds in each minute, 25 minutes in a pomodoro session.
         public string TimeLeft => TimeSpan.FromSeconds(_timeLeft).ToString(@"mm\:ss"); // Computed property using a Expression-bodied members use the lambda expression syntax to define methods that contain a single expression._
         private System.Threading.Timer _timer;
@@ -13,6 +14,8 @@ namespace Pomodoro.Pages
         */
         protected void Start()
         {
+            // Update started time.
+            timerStarted = DateTime.Now;
             // start the timer.
             _timer?.Dispose(); // dispose any timers if they exist, so we don't end up creating multiples.
             _timer = new System.Threading.Timer(_ => { // timer works using a callback function
