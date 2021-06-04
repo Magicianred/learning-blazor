@@ -14,6 +14,36 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
+.message-container {
+    position: relative;
+}
+
+.message {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+    pointer-events: none;
+    padding: 1em 0;
+    opacity: 75%;
+}
+
+.overlay .text {
+    margin: 0 auto;
+    width: 98%;
+    display: block;
+    border: 2px dotted #cfcfcf;
+    padding: 1em;
+    text-align: center;
+}
+
 .content {
     padding-top: 1.1rem;
 }

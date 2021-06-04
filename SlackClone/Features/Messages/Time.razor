@@ -1,0 +1,8 @@
+<span>@Value.ToString("hh:mm")</span>
+
+@code {
+    [Parameter]
+    public DateTime Value { get; set; }
+    // Turns out, if you have a property with the same name as the component itself, you'll get an error
+}
+

@@ -1,0 +1,43 @@
+@page "/slack"
+@using SlackClone.Features.Messages
+@using SlackClone.Domain
+@using SlackClone.Features.PostNew
+@using SlackClone.Features.Edit
+
+
+@foreach (var message in messages)
+{
+    <EditableMessage details="@message"/>
+}
+
+<PostMessage OnPosted="HandleNewMessage"/>
+
+@code {
+    private List<SlackMessage> messages;
+    protected override void OnInitialized()
+    {
+        // This method is executed at the point your component is initialized, 
+        // before anything is rendered to the screen, making it the perfect place to retrieve data.
+        messages = new List<SlackMessage>
+        {
+            new SlackMessage 
+            {
+                Message = "Hello",
+                PostedBy = "GPS",
+                PostedOn = DateTime.Now 
+            },
+            new SlackMessage 
+            {
+                Message = "How are things?",
+                PostedBy = "Gwyn",
+                PostedOn = DateTime.Now 
+            },
+        };
+    
+    }
+
+    protected void HandleNewMessage(SlackMessage message)
+    {
+        messages.Add(message);
+    }
+}
