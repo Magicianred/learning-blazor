@@ -1,0 +1,57 @@
+@using SlackClone.Domain
+@using SlackClone.Features.Message
+@using SlackClone.Features.Edit
+
+<div class="message-container">
+    @if(editMode) {
+        <EditMessage MessageText="@Details.Message" OnUpdated="@HandleMessageChanged" OnCancelled="@HandleEditCancelled"/>
+
+    } else 
+    {
+        @if (overlayVisible)
+        {
+            <div class=overlay>
+                <div class ="text">Edit
+                </div>
+            </div>
+        }
+        <div class="message" @onmouseover="ShowOverlay" @onmouseout="HideOverlay" @onclick="ToggleEdit">
+            <Message Details="@Details"></Message>
+        </div>
+    }
+</div>
+
+
+@code
+{
+    [Parameter]
+    public SlackMessage Details {get; set;}
+
+    private bool overlayVisible;
+    private bool editMode;
+
+    void ShowOverlay()
+    {
+        overlayVisible = true;
+    }
+
+    void HideOverlay()
+    {
+        overlayVisible = false;
+    }
+
+    void ToggleEdit()
+    {   
+        editMode = true;
+        overlayVisible = false;
+    }
+    void HandleEditCancelled()
+    {
+        editMode = false;
+    }
+    void HandleMessageChanged(string newMessage)
+    {
+        Details.Message = newMessage;
+        editMode = false;
+    }
+}

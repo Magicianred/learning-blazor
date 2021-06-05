@@ -1,0 +1,44 @@
+@using Pomodoro.Domain
+
+@if (PomodoroTasks == null){
+    <p><em>Loading...</em></p>
+} else 
+{
+    <div style="margin-top: 15px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Start time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pomodoroTask in PomodoroTasks)
+                {
+                    <tr>
+                        <td>@pomodoroTask.Description</td>
+                        <td>@pomodoroTask.StartTime</td>
+                    </tr>
+                }
+            </tbody>
+        </table> 
+    </div>
+
+}
+
+@code {
+    [Parameter]
+    public List<PomodoroTask> PomodoroTasks {get; set;}
+
+    [Parameter]
+    public EventCallback<PomodoroTask> OnStarted {get;set;}
+    
+    public PomodoroTask NewPomodoroTask {get; set;} = new PomodoroTask();
+    
+    async Task HandleStarted()
+    {
+        await OnStarted.InvokeAsync(NewPomodoroTask);
+    }
+    
+    
+}

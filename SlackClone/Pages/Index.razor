@@ -1,0 +1,47 @@
+﻿@page "/"
+@using SlackClone.Domain
+@using SlackClone.Features.Message
+@using SlackClone.Features.PostNew
+@using SlackClone.Features.Edit
+
+
+@foreach (var message in messages)
+{
+    <EditableMessage Details="@message"></EditableMessage>
+}
+
+<PostMessage OnPosted="HandleNewMessage"/>
+
+
+@code {
+    private List<SlackMessage> messages;
+    protected override void OnInitialized()
+    {
+        messages = new List<SlackMessage>
+        {
+            new SlackMessage 
+            {
+                Message = "YO",
+                PostedBy = "GPS",
+                PostedOn = DateTime.Now
+            },
+            new SlackMessage 
+            {
+                Message = "yeah?",
+                PostedBy = "Gwyn",
+                PostedOn = DateTime.Now
+            },
+            new SlackMessage 
+            {
+                Message = "OMG WOW?",
+                PostedBy = "SUG",
+                PostedOn = DateTime.Now
+            },
+        
+        };
+    }
+    protected void HandleNewMessage(SlackMessage message)
+    {
+        messages.Add(message);
+    }
+}
