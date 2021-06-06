@@ -6,6 +6,7 @@ namespace Pomodoro.Domain
     {
         public string Description { get; set; }
         public DateTime StartTime {get; set;}
+        public bool Completed {get; set;}
     
     }
 }

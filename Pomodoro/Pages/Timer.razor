@@ -2,10 +2,12 @@
 @inherits TimerBase
 
 <div style="font-size:5em;">@TimeLeft</div>
-<p>Timer started: @timerStarted</p>
-<button class="btn btn-primary" @onclick="Start">Start</button>
-<button class="btn btn-success" @onclick="Reset">Reset</button>
-<button class="btn btn-danger" @onclick="Stop">Stop</button>
+<input type="text" @bind="@TaskDescription" placeholder="Task description..."/>
+<div style="margin-top: 20px;">
+    <button class="btn btn-primary" @onclick="Start" disabled="@StartButtonDisabled">Start</button>
+    <button class="btn btn-success" @onclick="Reset">Reset</button>
+    <button class="btn btn-danger" @onclick="Stop" disabled="@StopButtonDisabled">Stop</button>
+</div>
 
 <TaskTable PomodoroTasks="@pomodoroTasks" OnStarted="Start"/>
 
