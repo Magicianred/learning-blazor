@@ -21,7 +21,7 @@ namespace ShoppingCartStarter.Server.Endpoints.Cart
         {
             // in reality we'd retrieve a specific cart (for the current user/session) but for demo
             // purposes this just pulls back the first cart it finds
-            // this handler retieves the givens cart's details from the db and maps it to an instance of shared Cart.Details model.
+            // this handler retrieves the givens cart's details from the db and maps it to an instance of shared Cart.Details model.
             
             var cart = await _context.Carts
                 .Include(x => x.LineItems)

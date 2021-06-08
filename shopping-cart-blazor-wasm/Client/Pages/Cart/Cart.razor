@@ -1,13 +1,15 @@
-@page "/cart"
 @inherits CartBase
+@page "/cart"
 
-<h3>Your shopping cart</h3>
+
+<h2>Your Shopping Cart</h2>
 
 @if(Model != null)
 {
     @foreach (var line in Model.Items)
     {
-        <Item details="@line" OnDeleted="ReloadCart" OnQuantityChanged="ReloadCart" />
+        <Item Details="@line" />
     }
 
 }
+

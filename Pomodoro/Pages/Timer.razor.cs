@@ -13,7 +13,7 @@ namespace Pomodoro.Pages
         protected bool StopButtonDisabled {get; set;} = true;
 
         protected string TaskDescription {get;set;}
-        private int _timeLeft = 5; // 60 seconds in each minute, 25 minutes in a pomodoro session.
+        private int _timeLeft = 60*25; // 60 seconds in each minute, 25 minutes in a pomodoro session.
         public string TimeLeft => TimeSpan.FromSeconds(_timeLeft).ToString(@"mm\:ss"); // Computed property using a Expression-bodied members use the lambda expression syntax to define methods that contain a single expression._
         private System.Threading.Timer _timer;
         /*
