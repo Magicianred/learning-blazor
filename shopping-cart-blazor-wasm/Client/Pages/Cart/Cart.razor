@@ -1,0 +1,13 @@
+@page "/cart"
+@inherits CartBase
+
+<h3>Your shopping cart</h3>
+
+@if(Model != null)
+{
+    @foreach (var line in Model.Items)
+    {
+        <Item details="@line" OnDeleted="ReloadCart" OnQuantityChanged="ReloadCart" />
+    }
+
+}
